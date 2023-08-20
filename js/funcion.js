@@ -42,34 +42,59 @@ function getTextValues(ID1, ID2, ID3, ID4, ID5, ID6, ID7, ID8)
     const textElement6=document.getElementById(ID6);
     
 
-   if(inputValue=="SELL200" && total>=200)
+   if(total>=200)
     {
         document.getElementById(ID6).disabled=false;
     }  
-    return total;
+    
 }
 
-function getInputValue(ID1,ID2, ID3)
+function getInputValue(ID1,ID2, ID3, ID4)
 {
     const inputElement1=document.getElementById(ID1);
-    const string= inputElement1.innerText;
-    const inputNumber1= parseFloat(string);
+    const string1= inputElement1.innerText;
+    const inputNumber1= parseFloat(string1);
     
     const inputElement2=document.getElementById(ID2);
     
-    const discount=(inputNumber1*0.2);
+    const discount=(inputNumber1*0.2).toFixed(2);
     
-    inputElement2.innerText=discount.toFixed(2);
+    
     const string2= inputElement2.innerText;
     const inputNumber2= parseFloat(string2);
     
 
     const inputElement3=document.getElementById(ID3);
 
-    const fPrice = inputNumber1 - inputNumber2;
-     console.log(fPrice);
-    inputElement3.innerText= fPrice.toFixed(2);
+    const inputElement4=document.getElementById(ID4);
+    const string4= inputElement4.value;
+
+    if(string4==='SELL200'){
+        inputElement2.innerText=discount
+        const fPrice = inputNumber1 - discount;
+        inputElement3.innerText=fPrice;
+        
+    }
+    
 
 
  
+}
+
+function homeClick(ID1, ID2, ID3, ID4, ID5)
+{
+    const home1=document.getElementById(ID1);
+    home1.value='';
+
+    const home2=document.getElementById(ID2);
+    home2.innerText='00.00';
+
+    const home3=document.getElementById(ID3);
+    home3.innerText='00.00';
+
+    const home4=document.getElementById(ID4);
+    home4.innerText='00.00';
+
+    const home5=document.getElementById(ID5);
+    home5.innerText='';
 }
