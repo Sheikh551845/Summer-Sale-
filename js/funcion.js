@@ -81,7 +81,7 @@ function getInputValue(ID1,ID2, ID3, ID4)
  
 }
 
-function homeClick(ID1, ID2, ID3, ID4, ID5)
+function homeClick(ID1, ID2, ID3, ID4, ID5, ID6, ID7)
 {
     const home1=document.getElementById(ID1);
     home1.value='';
@@ -97,4 +97,9 @@ function homeClick(ID1, ID2, ID3, ID4, ID5)
 
     const home5=document.getElementById(ID5);
     home5.innerText='';
+
+    document.getElementById(ID6).disabled=true;
+
+
+    document.getElementById(ID7).disabled=true;
 }

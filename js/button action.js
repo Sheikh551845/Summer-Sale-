@@ -5,7 +5,8 @@
 
  document.getElementById('home').addEventListener('click', function()
  {
-    const reset = homeClick('input', 't1-price', 'd-price', 't2-price', 'New');
+    const reset = homeClick('input', 't1-price', 'd-price', 't2-price', 'New', 'Apply', 'btn-2');
+    
  })
 
  
