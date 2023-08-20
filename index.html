@@ -35,13 +35,13 @@
     <div class="bg-[#F8F8F8]">
         
         <div class="max-w-sm md:max-w-xl lg:max-w-screen-xl mx-auto py-28 ">
-                    <!-- cart section div for small device -->
+                    <!-- cart section div for small device
                     <div class="block lg:hidden mb-10">
                         <div class="w-80 bg-base-100 shadow-xl border max-w-screen-xl mb-5 p-3 rounded-lg">
                             <p class="text-2xl font-medium">Have coupon?</p>
                             <div class="flex">
                                 <input type="text" placeholder="Coupon code" class="pr-3">
-                                <button class="bg-[#E527B2] text-white text-xl font-medium px-5 py-1 rounded">Apply </button>
+                                <button class="bg-[#E527B2] text-white text-xl font-medium px-5 py-1 rounded" id="s-Apply">Apply </button>
                             </div>
                             
                            
@@ -60,7 +60,7 @@
 
                                 <div class="flex justify-center">
 
-                               <button class="bg-[#E527B2] text-white text-xl font-medium px-5 py-1 rounded w-4/5" onclick="my_modal_2.showModal()">Make Purchase </button>
+                               <button class="bg-[#E527B2] text-white text-xl font-medium px-5 py-1 rounded w-4/5" id="s-btn-2" onclick="my_modal_2.showModal()">Make Purchase </button>
                                 <dialog id="my_modal_2" class="modal">
                                     <div class="card w-64 h-64 md:w-80 md:h-80 bg-base-100 shadow-xl border " >
                                         <form method="dialog" class="modal-box w-64 h-64 md:w-80 md:h-80 p-1 mb-0">
@@ -72,7 +72,7 @@
                                                     <h2 class="card-title  text-sm md:text-lg">Congratulations</h2>
                                                     <p class="m-0.5 text-sm md:text-lg">Your Purchase the product.</p>
                             
-                                                      <a href="index.html"><button class="bg-[#E527B2] text-white text:sm md:text-lg font-medium px-5 py-1 rounded ">Go Home </button></a> 
+                                                      <a href="index.html"><button class="bg-[#E527B2] text-white text:sm md:text-lg font-medium px-5 py-1 rounded " id="s-home">Go Home </button></a> 
 
                                                 
                                                 </div>
@@ -90,9 +90,10 @@
                         </div>
         
                            
-              </div>
+              </div> -->
+    
 
-        <div class="flex gap-1">
+        <div class="flex flex-col-reverse lg:flex-row gap-1">
                 <!-- card container -->
             <div>
                 <!-- firs card section -->   
@@ -101,7 +102,7 @@
       <div class="flex gap-2">
 
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
-              <div class="card w-72 bg-base-100 shadow-xl border max-w-screen-xl p-3">
+              <div class="card w-72 bg-base-100 shadow-xl border max-w-screen-xl p-3 cursor-pointer" id="card-1">
                   <figure class="bg-[#F8F8F8] rounded-lg"><img src="./images/prod1.png" alt="" class="py-7"/></figure>
                   <div class="text-center pt-5">
                       <div class="rating">
@@ -111,12 +112,12 @@
                           <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                           <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                         </div>
-                        <p class="text-xl font-semibold py-2">K. Accessories</p>
-                        <p class="text-slate-400 text-xl font-normal">39.00 TK</p>
+                        <p class="text-xl font-semibold py-2" id="c1-name">K. Accessories</p>
+                        <p class="text-slate-400 text-xl font-normal"><span id="c1-price">39.00</span>TK</p>
                     </div>
                   </div>
           
-                  <div class="card w-72 bg-base-100 shadow-xl border max-w-screen-xl p-3">
+                  <div class="card w-72 bg-base-100 shadow-xl border max-w-screen-xl p-3 cursor-pointer" id="card-2">
                       <figure class="bg-[#F8F8F8] rounded-lg"><img src="./images/prod2.png" alt="" class="py-7"/></figure>
                       <div class="text-center pt-5">
                           <div class="rating">
@@ -126,12 +127,12 @@
                               <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                               <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                             </div>
-                            <p class="text-xl font-semibold py-2">K. Accessories</p>
-                            <p class="text-slate-400 text-xl font-normal"><span>25.00</span>TK</p>
+                            <p class="text-xl font-semibold py-2" id="c2-name">K. Accessories</p>
+                            <p class="text-slate-400 text-xl font-normal"><span  id="c2-price" >25.00</span>TK</p>
                         </div>
                       </div>
                       
-                      <div class="card w-72 bg-base-100 shadow-xl border max-w-screen-xl p-3">
+                      <div class="card w-72 bg-base-100 shadow-xl border max-w-screen-xl p-3 cursor-pointer" id="card-3">
                           <figure class="bg-[#F8F8F8] rounded-lg"><img src="./images/prod3.png" alt="" class="py-7"/></figure>
                           <div class="text-center pt-5">
                               <div class="rating">
@@ -141,8 +142,8 @@
                                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked/>
                                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                 </div>
-                                <p class="text-xl font-semibold py-2">Home Cooker</p>
-                                <p class="text-slate-400 text-xl font-normal"><span>49.00</span>TK</p>
+                                <p class="text-xl font-semibold py-2" id="c3-name">Home Cooker</p>
+                                <p class="text-slate-400 text-xl font-normal"><span  id="c3-price">49.00</span>TK</p>
                             </div>
                           </div>               
          </div>
@@ -151,10 +152,10 @@
                 </div>
       
                 <!-- second card section -->
-                <div class="my-12">
+                <div class="my-12 ">
       <p class="text-[#111] font-semibold text-4xl pb-10">Sportswear</p>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
-         <div class="card w-72 bg-base-100 shadow-xl border max-w-screen-xl p-3">
+         <div class="card w-72 bg-base-100 shadow-xl border max-w-screen-xl p-3 cursor-pointer" id="card-4">
              <figure class="bg-[#F8F8F8] rounded-lg"><img src="./images/prod4.png" alt="" class="py-7"/></figure>
              <div class="text-center pt-5">
                  <div class="rating">
@@ -164,12 +165,12 @@
                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                    </div>
-                   <p class="text-xl font-semibold py-2">Sports Back Cap</p>
-                   <p class="text-slate-400 text-xl font-normal">49.00 TK</p>
+                   <p class="text-xl font-semibold py-2" id="c4-name">Sports Back Cap</p>
+                   <p class="text-slate-400 text-xl font-normal"><span id="c4-price">49.00</span>TK</p>
                </div>
              </div>
      
-             <div class="card w-72 bg-base-100 shadow-xl border max-w-screen-xl p-3">
+             <div class="card w-72 bg-base-100 shadow-xl border max-w-screen-xl p-3 cursor-pointer" id="card-5">
                  <figure class="bg-[#F8F8F8] rounded-lg"><img src="./images/prod5.png" alt="" class="py-7"/></figure>
                  <div class="text-center pt-5">
                      <div class="rating">
@@ -179,12 +180,12 @@
                          <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                          <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                        </div>
-                       <p class="text-xl font-semibold py-2">Full Jersey Set</p>
-                       <p class="text-slate-400 text-xl font-normal"><span>69.00</span>TK</p>
+                       <p class="text-xl font-semibold py-2" id="c5-name">Full Jersey Set</p>
+                       <p class="text-slate-400 text-xl font-normal"><span  id="c5-price">69.00</span>TK</p>
                    </div>
                  </div>
                  
-                 <div class="card w-72 bg-base-100 shadow-xl border max-w-screen-xl p-3">
+                 <div class="card w-72 bg-base-100 shadow-xl border max-w-screen-xl p-3 cursor-pointer" id="card-6">
                      <figure class="bg-[#F8F8F8] rounded-lg"><img src="./images/prod6.png" alt="" class="py-7"/></figure>
                      <div class="text-center pt-5">
                          <div class="rating">
@@ -194,8 +195,8 @@
                              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked/>
                              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                            </div>
-                           <p class="text-xl font-semibold py-2">Sports cates</p>
-                           <p class="text-slate-400 text-xl font-normal"><span>159.00</span>TK</p>
+                           <p class="text-xl font-semibold py-2" id="c6-name">Sports cates</p>
+                           <p class="text-slate-400 text-xl font-normal"><span  id="c6-price">159.00</span>TK</p>
                        </div>
                      </div>               
     </div>
@@ -205,7 +206,7 @@
                 <div>
       <p class="text-[#111] font-semibold text-4xl pb-10">Furniture</p>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 md:gap-2">
-             <div class="card w-72 bg-base-100 shadow-xl border max-w-screen-xl p-3">
+             <div class="card w-72 bg-base-100 shadow-xl border max-w-screen-xl p-3 cursor-pointer" id="card-7">
                  <figure class="bg-[#F8F8F8] rounded-lg"><img src="./images/prod7.png" alt="" class="py-7"/></figure>
                  <div class="text-center pt-5">
                      <div class="rating">
@@ -215,12 +216,12 @@
                          <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                          <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                        </div>
-                       <p class="text-xl font-semibold py-2">Single Relax Chair</p>
-                       <p class="text-slate-400 text-xl font-normal">185.00 TK</p>
+                       <p class="text-xl font-semibold py-2" id="c7-name">Single Relax Chair</p>
+                       <p class="text-slate-400 text-xl font-normal"><span  id="c7-price">185.00</span>TK</p>
                    </div>
                  </div>
          
-                 <div class="card w-72 bg-base-100 shadow-xl border max-w-screen-xl p-3">
+                 <div class="card w-72 bg-base-100 shadow-xl border max-w-screen-xl p-3 cursor-pointer" id="card-8">
                      <figure class="bg-[#F8F8F8] rounded-lg"><img src="./images/prod8.png" alt="" class="py-7"/></figure>
                      <div class="text-center pt-5">
                          <div class="rating">
@@ -230,12 +231,12 @@
                              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                            </div>
-                           <p class="text-xl font-semibold py-2">Children play</p>
-                           <p class="text-slate-400 text-xl font-normal"><span>299.00</span>TK</p>
+                           <p class="text-xl font-semibold py-2" id="c8-name">Children play</p>
+                           <p class="text-slate-400 text-xl font-normal"><span  id="c8-price">299.00</span>TK</p>
                        </div>
                      </div>
                      
-                     <div class="card w-72 bg-base-100 shadow-xl border max-w-screen-xl p-3">
+                     <div class="card w-72 bg-base-100 shadow-xl border max-w-screen-xl p-3 cursor-pointer" id="card-9">
                          <figure class="bg-[#F8F8F8] rounded-lg"><img src="./images/prod9.png" alt="" class="py-7"/></figure>
                          <div class="text-center pt-5">
                              <div class="rating">
@@ -245,8 +246,8 @@
                                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked/>
                                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                </div>
-                               <p class="text-xl font-semibold py-2">Flexible Sofa</p>
-                               <p class="text-slate-400 text-xl font-normal"><span>339.00</span>TK</p>
+                               <p class="text-xl font-semibold py-2" id="c9-name">Flexible Sofa</p>
+                               <p class="text-slate-400 text-xl font-normal"><span  id="c9-price">339.00</span>TK</p>
                            </div>
                          </div>               
         </div>
@@ -254,31 +255,34 @@
            </div>
 
              <!-- cart section div -->
-              <div class="hidden lg:block pt-20">
+              <div class=" lg:pt-20 mb-10 lg:mb-0">
                         <div class="w-80 bg-base-100 shadow-xl border max-w-screen-xl mb-5 p-3 rounded-lg">
                             <p class="text-2xl font-medium">Have coupon?</p>
                             <div class="flex">
-                                <input type="text" placeholder="Coupon code" class="pr-3">
-                                <button class="bg-[#E527B2] text-white text-xl font-medium px-5 py-1 rounded">Apply </button>
+                                <input type="text" placeholder="Write coupon code first" class="pr-3" id="input">
+                                <button class="bg-[#E527B2] text-white text-xl font-medium px-5 py-1 rounded disabled:bg-gray-400"  disabled id="Apply">Apply </button>
                             </div>
                             
                            
                         </div>
         
                         <div class="card w-80 bg-base-100 shadow-xl border max-w-screen-xl p-3">
+                            <div id="New">
+
+                                
+                            </div>
                             <div>
                                 <hr class="border-t-2 mx-auto my-4 ">
                             </div>
-                            
                             <div>
-                                <p class="text-2xl font-medium">Total price: <span class="text-slate-400 text-xl font-normal"><span>00.00</span>TK</span></p>
-                                <p class="text-2xl font-medium">Discount : <span class="text-slate-400 text-xl font-normal"><span>00.00</span>TK</span></p>
-                                <p class="text-2xl font-medium">Total: <span class="text-slate-400 text-xl font-normal"><span>00.00</span>TK</span></p>
+                                <p class="text-2xl font-medium">Total price: <span class="text-slate-400 text-xl font-normal"><span id="t1-price">00.00</span>TK</span></p>
+                                <p class="text-2xl font-medium">Discount : <span class="text-slate-400 text-xl font-normal"><span id="d-price">00.00</span>TK</span></p>
+                                <p class="text-2xl font-medium">Total: <span class="text-slate-400 text-xl font-normal"><span id="t2-price">00.00</span>TK</span></p>
                                 <hr class="border-t-2 mx-auto my-4 ">
 
                                 <div class="flex justify-center">
 
-                               <button class="bg-[#E527B2] text-white text-xl font-medium px-5 py-1 rounded w-4/5" onclick="my_modal_1.showModal()">Make Purchase </button>
+                               <button class="bg-[#E527B2] text-white text-xl font-medium px-5 py-1 rounded w-4/5 disabled:bg-gray-400" disabled id="btn-2" onclick="my_modal_1.showModal()">Make Purchase </button>
                                 <dialog id="my_modal_1" class="modal">
                                     <div class="card w-96 bg-base-100 shadow-xl border " >
                                         <form method="dialog" class="modal-box w-96 p-1 py-12">
@@ -300,7 +304,7 @@
                                            
                                             <div class="modal-action">
                                               <!-- if there is a button in form, it will close the modal -->
-                                              <a href="index.html"><button class="bg-[#E527B2] text-white text-xl font-medium px-5 py-1 rounded ">Go Home </button></a>  
+                                              <a href="index.html"><button class="bg-[#E527B2] text-white text-xl font-medium px-5 py-1 rounded " id="home" >Go Home </button></a>  
                                          
                                           </div>
                                         </div>
@@ -325,7 +329,9 @@
                     
             
             
-            
+            <script src="./js/card click.js"></script>
+            <script src="./js/funcion.js"></script>
+            <script src="./js/button action.js"></script>
 
            
 
